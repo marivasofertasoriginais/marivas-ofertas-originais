@@ -34,7 +34,7 @@ console.log("[" + new Date().toISOString() + "] " + msg);
 // "Publicação" no-op — espelha o canal "teste" do app. Troque por chamada real
 // quando houver integração externa configurada.
 async function publicar(canal, texto) {
-log(publicar(${canal}): ${texto?.slice(0, 60)}...);
+log(`publicar(${canal}): ${texto?.slice(0, 60)}...`);
 return { ok: true, canal, texto, simulado: true };
 }
 
