@@ -128,7 +128,7 @@ if (!prox || prox <= agora) return true;
 return false;
 });
 
-log(Devidos: ${devidos.length});
+log(`Devidos: ${devidos.length}`);
 let sucessos = 0;
 let falhas = 0;
 for (const item of devidos) {
