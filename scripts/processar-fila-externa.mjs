@@ -136,7 +136,7 @@ const res = await enviarItem(item);
 if (res?.ok) sucessos++;
 else falhas++;
 }
-log(Concluído — sucessos: ${sucessos}, falhas: ${falhas});
+log(`Concluído — sucessos: ${sucessos}, falhas: ${falhas}`);
 return { processados: devidos.length, sucessos, falhas };
 }
 
