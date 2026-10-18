@@ -105,7 +105,7 @@ await base44.entities.Historico.create({
 oferta_id: item.oferta_id,
 oferta_titulo: item.produto_nome,
 acao: "erro",
-detalhe: Falha no envio para ${item.canal}: ${String(err?.message || err)},
+detalhe: `Falha no envio para ${item.canal}: ${String(err?.message || err)}`,
 }).catch(() => {});
 }
 return { ok: false, erro: err?.message || String(err) };
