@@ -28,7 +28,7 @@ const INTERVALO_RETRY_MIN = 5;
 const base44 = createClient({ appId: APP_ID });
 
 function log(msg) {
-console.log([${new Date().toISOString()}] ${msg});
+console.log("[" + new Date().toISOString() + "] " + msg);
 }
 
 // "Publicação" no-op — espelha o canal "teste" do app. Troque por chamada real
