@@ -1,0 +1,13 @@
+name: Preparar ofertas
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar agendamento
+        run: echo "Execução de preparação de ofertas iniciada."
