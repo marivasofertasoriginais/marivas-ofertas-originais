@@ -9,5 +9,13 @@ jobs:
   preparar:
     runs-on: ubuntu-latest
     steps:
-      - name: Verificar agendamento
-        run: echo "Execução de preparação de ofertas iniciada."
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Buscar tendências do Mercado Livre
+        run: node buscar-tendencias.mjs
