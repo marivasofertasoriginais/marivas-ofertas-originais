@@ -1,3 +1,4 @@
+
 name: Preparar ofertas
 
 on:
@@ -18,4 +19,7 @@ jobs:
           node-version: 20
 
       - name: Buscar tendências do Mercado Livre
+        env:
+          ML_CLIENT_ID: ${{ secrets.ML_CLIENT_ID }}
+          ML_CLIENT_SECRET: ${{ secrets.ML_CLIENT_SECRET }}
         run: node buscar-tendencias.mjs
