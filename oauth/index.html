@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autorização Mercado Livre</title>
+</head>
+<body>
+  <h1>Retorno da autorização</h1>
+  <p>Esta página é destinada ao retorno da autorização do Mercado Livre.</p>
+  <p>Não compartilhe códigos de autorização ou tokens.</p>
+  <p id="status">Aguardando retorno...</p>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const erro = params.get("error");
+    const codigo = params.get("code");
+
+    const status = document.getElementById("status");
+
+    if (erro) {
+      status.textContent = "A autorização não foi concluída. Erro: " + erro;
+    } else if (codigo) {
+      status.textContent = "Código de autorização recebido. Não compartilhe esta página nem o endereço do navegador.";
+    } else {
+      status.textContent = "Página pronta para receber o retorno da autorização.";
+    }
+  </script>
+</body>
+</html>
